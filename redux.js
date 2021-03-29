@@ -1,4 +1,4 @@
-import { CombineReducers, createStore } from "redux";
+import { combineReducers, createStore } from "redux";
 
 // action.js
 // action は redux の機能でなく、オブジェクトを作るための純粋なjsの関数です。
@@ -22,7 +22,7 @@ INITIAL_STATE = {
 // stateの変更はjsonの書き換えによってのみ管理します。
 // reducer は action で生成されたオブジェクトを受け取り、巨大なjson(store)を書き換える関数です。
 const reducer = (state = INITIAL_STATE, action) => {
-  switch (action.stype) {
+  switch (action.type) {
     case "ADD_NAME":
       return { ...state, name: action.name };
     case "DELETE_NAME":
